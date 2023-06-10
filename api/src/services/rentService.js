@@ -1,6 +1,7 @@
 const ItemService = require('./itemService');
 const SxTApi = require('./sxtApi');
-const env = require('../../config/env')
+const env = require('../../config/env');
+const logger = require('../../helpers/logger');
 
 class RentService {
   static async startRent({ accessToken, rentId, nftId, poolId, rentee, price, expirationDate, initDate, owner }) {
@@ -12,6 +13,7 @@ class RentService {
       accessToken,
     });
     await ItemService.rentItem({ accessToken, nftId, rentee })
+    logger.info({ rentPrice, rentId });
     return response;
   }
 
