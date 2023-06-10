@@ -19,5 +19,8 @@ module.exports = {
   sxtOrgCode: process.env.SXT_ORG_CODE ?? "",
   biscuitItems: process.env.BISCUIT_ITEMS ?? "",
   biscuitRents: process.env.BISCUIT_RENTS ?? "",
-  biscuitPools: process.env.BISCUIT_POOLS ?? ""
+  biscuitPools: process.env.BISCUIT_POOLS ?? "",
+  mongoUserName: process.env.MONGO_USER ?? "",
+  mongoPwd: process.env.MONGO_PWD ?? "",
+  mongoUri: process.env.MONGO_URI ?? ""
 }
